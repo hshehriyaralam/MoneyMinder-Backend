@@ -1,7 +1,6 @@
 import express from "express"
 import cors from 'cors'
 import cookieParser from "cookie-parser"
-import dotenv from 'dotenv'
 
 const app = express()
 
@@ -20,5 +19,7 @@ app.get('/', (req,res) => {
     res.send("Home Routes")
 })
 
+import userRouter from "./Routes/userRoute.js"
+app.use('/api/user',userRouter)
 
 export {app}
