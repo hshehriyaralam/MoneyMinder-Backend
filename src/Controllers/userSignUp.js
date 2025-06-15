@@ -36,8 +36,8 @@ const  userSignUp = async (req,res) => {
     res.status(201)
     res.cookie('token',token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'None', 
+        secure: false,
+        sameSite: 'Lax', 
         maxAge: 7 * 24 * 60 * 60 * 1000   
     })
     .json({
@@ -52,7 +52,7 @@ const  userSignUp = async (req,res) => {
     })
     }catch(error){
         console.log("user SignUp failed",error.message);
-        res.status(500).json({ message: "Server error" });
+        res.status(500).json({ message: "SignUp Server error" });
 
     }
 }
