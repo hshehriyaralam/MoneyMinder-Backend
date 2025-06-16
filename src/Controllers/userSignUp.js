@@ -4,7 +4,7 @@ import {getRandomAvatar}  from "../Utils/AvatarList.js"
 const  userSignUp = async (req,res) => {
     try{
         
-        const {fullName,email,password,profilePicture} = req.body;
+        const {fullName,email,password} = req.body;
 
         // check validations
         if(!fullName || !email || !password){

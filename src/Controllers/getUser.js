@@ -1,4 +1,3 @@
-import {User} from "../Models/user.model.js"
 
 const fetchUser = async (req,res) => {
     try{
