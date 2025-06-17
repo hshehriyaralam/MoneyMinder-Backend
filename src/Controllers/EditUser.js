@@ -7,8 +7,8 @@ const EditUser = async (req,res) => {
         const {fullName,email} = req.body;
 
         const updateFields = {}
-        if(fullName && fullName.trim() !==  "") return updateFields.fullName = fullName;
-        if(email  && email.trim() !==  "") return updateFields.email = email;
+        if(fullName && fullName.trim() !==  "")  updateFields.fullName = fullName;
+        if(email  && email.trim() !==  "")  updateFields.email = email;
 
 
         if(Object.keys(updateFields).length === 0){
@@ -22,7 +22,7 @@ const EditUser = async (req,res) => {
         )
 
         res.status(200).json({
-            message : "user Udpdate Successfully",
+            message : "user Update Successfully",
             user : updateUser,
 
         })
