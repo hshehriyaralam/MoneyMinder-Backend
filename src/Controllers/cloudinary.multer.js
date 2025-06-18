@@ -32,8 +32,6 @@ const uploadProfileImage = async (req,res) => {
             return reject(new Error("User not found"))
           }
 
-          console.log("User Avatar", user.profilePicture);
-          
           user.profilePicture = result.secure_url;
           await user.save();
 

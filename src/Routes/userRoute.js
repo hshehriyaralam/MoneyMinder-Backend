@@ -6,6 +6,7 @@ import {authMiddleware} from "../Middleware/authMiddleware.js"
 import { EditUser } from "../Controllers/EditUser.js";
 import {upload} from "../Middleware/upload.js"
 import {uploadProfileImage} from  "../Controllers/cloudinary.multer.js"
+import { googleAuth } from "../Controllers/googleAuth.js";
 
 
 const userRouter = express.Router()
@@ -15,6 +16,7 @@ userRouter.post('/login', userLogin)
 userRouter.get('/fetch-user', authMiddleware, fetchUser)
 userRouter.put('/edit-user',authMiddleware,EditUser)
 userRouter.post('/upload-profile',authMiddleware, upload.single('profilePicture'),uploadProfileImage)
+userRouter.post('/google-auth',googleAuth)
 
 
 

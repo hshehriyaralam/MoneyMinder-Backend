@@ -1,5 +1,4 @@
 import { User } from "../Models/user.model.js";
-import {getRandomAvatar}  from "../Utils/AvatarList.js"
 
 const  userSignUp = async (req,res) => {
     try{
@@ -18,15 +17,13 @@ const  userSignUp = async (req,res) => {
         }
 
 
-        //profile avatar
-        const avatar = getRandomAvatar()
+       
 
         const user = new User({
             fullName,
             email,
             password,
-            profilePicture : avatar
-        })
+          })
 
         await user.save()
 
