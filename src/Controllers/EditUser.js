@@ -12,7 +12,7 @@ const EditUser = async (req,res) => {
 
 
         if(Object.keys(updateFields).length === 0){
-            return res.status(400).json({message : "No vaid field for update"})
+            return res.status(400).json({message : "No valid field for update"})
         }
 
         const updateUser = await User.findByIdAndUpdate(

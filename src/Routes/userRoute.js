@@ -8,6 +8,7 @@ import {upload} from "../Middleware/upload.js"
 import {uploadProfileImage} from  "../Controllers/cloudinary.multer.js"
 import { googleAuth } from "../Controllers/googleAuth.js";
 import {lougOut} from "../Controllers/logOutUser.js"
+import { deleteAccount } from "../Controllers/DeleteController.js";
 
 
 const userRouter = express.Router()
@@ -19,6 +20,7 @@ userRouter.put('/edit-user',authMiddleware,EditUser)
 userRouter.post('/upload-profile',authMiddleware, upload.single('profilePicture'),uploadProfileImage)
 userRouter.post('/google-auth',googleAuth)
 userRouter.post('/logout',lougOut)
+userRouter.delete('/delete-user',authMiddleware,deleteAccount)
 
 
 
