@@ -8,7 +8,7 @@ import {upload} from "../Middleware/upload.js"
 import {uploadProfileImage} from  "../Controllers/cloudinary.multer.js"
 import { googleAuth } from "../Controllers/googleAuth.js";
 import {lougOut} from "../Controllers/logOutUser.js"
-import { deleteAccount } from "../Controllers/DeleteController.js";
+import { deleteAccount } from "../Controllers/DeleteUser.js";
 
 
 const userRouter = express.Router()
