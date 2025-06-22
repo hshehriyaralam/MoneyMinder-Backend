@@ -11,7 +11,7 @@ const upload = multer({
     if (file.mimetype.startsWith('image/')) {
       cb(null, true); // ✅ Accept the image
     } else {
-      cb(new Error('Only image files are allowed!'), false); // ❌ Reject non-image
+      cb(new Error('Only image files are allowed!'), false); 
     }
   }
 });

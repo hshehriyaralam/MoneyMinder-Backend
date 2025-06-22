@@ -28,17 +28,12 @@ const transactionsSchema = new Schema({
     },
     userId : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "User",
+        ref : 'User',
         required : true,
     }
 },{
     timestamps : true,
 })
-
-
-
-
-
 
 
 const Transactions = mongoose.model("transactions", transactionsSchema)

@@ -33,9 +33,6 @@ const googleAuth = async (req,res) => {
             id : user._id,
             email : user.email
         }
-        console.log("tokenPayload Id",tokenPayload.id);
-        console.log("tokenPayload email",tokenPayload.email);
-
         const jwtToken = jwt.sign({_id :tokenPayload.id},process.env.JWT_SECRET, {
             expiresIn : '7d'
         })
