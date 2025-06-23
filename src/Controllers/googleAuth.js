@@ -40,8 +40,8 @@ const googleAuth = async (req,res) => {
         res.status(200)
         res.cookie("token", jwtToken, {
         httpOnly: true,
-        secure: false,
-        sameSite: 'Lax',
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'None',
         maxAge: 7 * 24 * 60 * 60 * 1000
         })
         .json({
