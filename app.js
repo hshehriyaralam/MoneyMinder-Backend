@@ -19,8 +19,8 @@ app.get('/', (req,res) => {
     res.send("Home Routes")
 })
 
-import userRouter from "./Routes/userRoute.js"
-import transactionRoutes from "./Routes/transacionsRoute.js"
+import userRouter from "./src/Routes/userRoute.js"
+import transactionRoutes from "./src/Routes/transacionsRoute.js"
 app.use('/api/user',userRouter)
 app.use('/api/transactions',transactionRoutes)
 
